@@ -1,5 +1,4 @@
-#!/usr/bin/python -tt
-# Copyright 2010 Google Inc.
+
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
 
@@ -17,7 +16,15 @@
 # Return the resulting string.
 def verbing(s):
   # +++your code here+++
-  return
+  result = ""
+  if len(s)>=3:
+      if s[len(s)-3:] == 'ing':
+          result = s+'ly'
+      else:
+          result = s+'ing'
+  if len(s)<3:
+          result = s
+  return result
 
 
 # E. not_bad
@@ -30,7 +37,12 @@ def verbing(s):
 # This dinner is good!
 def not_bad(s):
   # +++your code here+++
-  return
+  a=s.find('not')
+  b=s.find('bad')
+  b=b+3
+  if a<b:
+      s = s.replace(s[a:b],'good');
+  return s
 
 
 # F. front_back
