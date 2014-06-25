@@ -25,7 +25,11 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
   # +++your code here+++
-  return
+  if count >= 10:
+      return "Number of donuts: many"
+  else:
+      return "Number of donuts: {0}".format(count) 
+
 
 
 # B. both_ends
@@ -34,8 +38,11 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-  # +++your code here+++
-  return
+    a=''
+    if len(s)<2:
+        return a
+    else:
+        return s[:2]+s[len(s)-2:]
 
 
 # C. fix_start
@@ -49,7 +56,9 @@ def both_ends(s):
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
   # +++your code here+++
-  return
+  result=s[1:].replace(s[0],'*')
+  resultt=s[0]+result
+  return resultt
 
 
 # D. MixUp
@@ -61,7 +70,10 @@ def fix_start(s):
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
   # +++your code here+++
-  return
+  aa=b[:2]+a[2:]
+  bb=a[:2]+b[2:]
+  result=aa+' '+bb
+  return result
 
 
 # Provided simple test() function used in main() to print
